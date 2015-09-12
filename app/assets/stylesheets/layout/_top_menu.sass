@@ -1,0 +1,266 @@
+//-- copyright
+// OpenProject is a project management system.
+// Copyright (C) 2012-2015 the OpenProject Foundation (OPF)
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License version 3.
+//
+// OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+// Copyright (C) 2006-2013 Jean-Philippe Lang
+// Copyright (C) 2010-2013 the ChiliProject Team
+//
+// This program is free software; you can redistribute it and/or
+// modify it under the terms of the GNU General Public License
+// as published by the Free Software Foundation; either version 2
+// of the License, or (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+//
+// See doc/COPYRIGHT.rdoc for more details.
+//++
+
+#logo
+  float: left
+  width: $main-menu-width
+  height: $header-height
+  background-color: $header-logo-bg-color
+  .home-link
+    margin-top: 13px
+    display: block
+    background: $header-home-link-bg
+    background-size: 150px
+    height: 42px
+    text-indent: -9999em
+
+#top-menu
+  background-color: $header-bg-color
+  height: $header-height
+  width: 100%
+  padding: 0
+  z-index: 22
+  position: relative
+  border-bottom: $header-border-bottom-width solid $header-border-bottom-color
+
+  %absolute-layout-mode &
+    position: absolute
+
+  ::-webkit-input-placeholder
+    color: $header-search-field-font-color
+  :-moz-placeholder
+    color: $header-search-field-font-color
+  ul
+    margin: 0
+    padding: 0
+    float: left
+    height: $header-height
+    border-top: 0
+    position: relative
+  li
+    float: left
+    list-style-type: none
+    white-space: nowrap
+    position: relative
+    z-index: 5
+    padding: 0
+    > a
+      height: $header-height
+      line-height: $header-height
+      zoom: 1
+      @include default-font($header-item-font-color, $header-item-font-size)
+      text-decoration: none
+      padding: 0 10px 0 10px
+    > a:hover
+      background: $header-item-bg-hover-color
+      color: $header-item-font-hover-color
+    > ul
+      top: $header-height + $header-border-bottom-width
+      display: none
+      position: absolute
+      height: auto
+      min-width: 270px
+      left: -1px
+      z-index: 20
+      border: 2px solid $header-drop-down-border-color
+      border-top: 0
+      background-color: $header-drop-down-bg-color
+      li  a
+        height: 30px
+        line-height: 30px
+      li
+        float: none
+        white-space: nowrap
+  li.open > a
+    position: relative
+    top: 0
+    z-index: 21
+  li.last-child > ul
+    left: auto
+    right: 0
+
+  li.drop-down
+    select
+      width: 100%
+
+    > a
+      &:after
+        @include icon-common
+        padding: 0 2px 0 9px
+        content: "\e0d2"
+    &:hover
+      background-color: $header-item-bg-hover-color
+    &.open > a
+      background-color: $header-item-bg-hover-color
+      color: $header-item-font-hover-color
+      &:after
+        @include icon-common
+        padding: 0 2px 0 9px
+        content: "\e0d4"
+
+    li
+      > a
+        color: $header-drop-down-item-font-color
+        padding: 0 15px
+        &:hover
+          background: $header-item-bg-hover-color
+          color: $header-drop-down-item-font-hover-color
+
+  #loggedas
+    float: right
+    margin-right: 0.5em
+    color: #fff
+  #nav-login-content
+    width: 506px
+    position: relative
+    position-top: 44px
+    float: right
+    background: #FFFFFF
+    border: 0 solid #194E60
+    border-top: 0
+    line-height: 19px
+    padding: 15px 10px 15px 15px
+    @include default-font(#555555, 13px)
+
+    a
+      display: inline
+      padding: 0
+      font-weight: normal
+    table td
+      padding: 3px
+
+.top-menu-search
+  display: inline-block
+  &:not(.-collapsed) > div
+    position: relative
+    padding-top: 9px
+
+.top-menu-search--wrapper
+  float: left
+
+.top-menu-search--button
+  line-height: $header-height
+  height: $header-height
+  @include default-font($header-item-font-color, $header-item-font-size)
+  background: transparent
+  &:hover
+    text-decoration: none
+
+  .top-menu-search:not(.-collapsed) &
+    position: absolute
+    top: 0
+    right: 0
+    color: $header-drop-down-item-font-color
+    -webkit-transform: scaleX(-1)
+    -moz-transform: scaleX(-1)
+    -o-transform: scaleX(-1)
+    -ms-transform: scaleX(-1)
+    transform: scaleX(-1)
+
+  .top-menu-search.-collapsed &
+    display: block
+    &:hover
+      background: $header-item-bg-hover-color
+      color: $header-item-font-hover-color
+
+input.top-menu-search--input
+  margin: 0
+  padding: 0 20px 0 10px
+  display: inline-block
+  border: $header-search-field-border
+  border-radius: 25px
+  width: 180px
+  outline: 0
+  font-size: 0.75rem
+  &::-ms-clear
+    margin-right: 5px
+    width: 20px
+  .top-menu-search.-collapsed &
+    display: none
+
+#quick-search
+  float: right
+
+#top-menu-items
+  padding-top: 0
+  .top-menu-items-right
+    float: right
+#top-menu.open
+  z-index: 5
+
+#select2-drop.project-search-results
+  margin: 0 0 0 -2px
+  border: 2px solid $header-drop-down-border-color
+  border-top: 0
+  @include default-font($header-drop-down-projects-search-font-color, 13px)
+  li
+    padding: 0 10px
+
+  .select2-search
+    background: $header-drop-down-projects-search-bg-color
+    margin: 0 0 10px 0
+
+  .select2-search:before
+    content: "\e0a1"
+    font-family: "openproject-icon-font"
+    color: #E0E0E0
+    position: absolute
+    top: 24px
+    right: 26px
+
+  .select2-search input
+    margin: 10px 10px
+    padding: 9px 7px 9px 10px
+    border: none
+    border-radius: 25px
+    width: 92%
+
+  .select2-results
+    margin: 0
+    padding: 0
+
+    .select2-highlighted
+      background: $primary-color !important
+      border-radius: 0 !important
+      font-weight: bold !important
+      color: $font-color-on-primary
+
+#header
+  height: $header-height
+  min-width: 1100px
+  .chzn-container .chzn-results .highlighted
+    background-color:  #24b3e7
+
+.account-nav
+  display: block
+  li
+    a
+      display: block
+      padding: 0 9px 0
+    > ul > li
+      max-width: 350px

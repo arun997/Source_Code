@@ -1,0 +1,100 @@
+<%#-- copyright
+OpenProject is a project management system.
+Copyright (C) 2012-2015 the OpenProject Foundation (OPF)
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+Copyright (C) 2006-2013 Jean-Philippe Lang
+Copyright (C) 2010-2013 the ChiliProject Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See doc/COPYRIGHT.rdoc for more details.
+
+++#%>
+
+<% html_title(l(:label_administration), l(:label_information_plural)) -%>
+
+<%= toolbar title: I18n.t('label_information_plural') %>
+<%= call_hook(:view_admin_info_top) %>
+
+<%= content_tag :h3, I18n.t('label_core_version') %>
+<p><strong><%= OpenProject::Info.versioned_name %></strong> (<%= @db_adapter_name %>)</p>
+
+<%= content_tag :h3, I18n.t('label_system') %>
+
+<div class="generic-table--container">
+  <div class="generic-table--results-container">
+    <table interactive-table role="grid" class="generic-table">
+      <colgroup>
+        <col>
+        <col>
+      </colgroup>
+      <tbody>
+        <% @checklist.each do |label, result| %>
+          <tr>
+            <td><%= l(label) %></td>
+            <td><%= icon_wrapper((result ? 'icon-context icon-yes' : 'icon-context icon-error'), (result ? l(:general_text_Yes) : l(:general_text_No))) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="generic-table--header-background"></div>
+  </div>
+ </div>
+
+<%= content_tag :h3, I18n.t('label_system_storage') %>
+
+<% @storage_information.each_with_index do  |(_,entries), i| %>
+<div class="attributes-group">
+  <div class="attributes-group--header">
+    <div class="attributes-group--header-container">
+      <h3 class="attributes-group--header-text"><%= l(:label_storage_group, identifier: i + 1) %></h3>
+    </div>
+  </div>
+  <dl class="attributes-key-value">
+    <dt class="attributes-key-value--key"><%= l(:label_storage_for) %></dt>
+    <dd class="attributes-key-value--value-container">
+      <div class="attributes-key-value--value -text">
+        <p>
+          <% entries[:labels].each do |l| %>
+            <%= l %>
+            <br/>
+          <% end %>
+        </p>
+      </div>
+    </dd>
+    <dt class="attributes-key-value--key"><%= l(:label_storage_free_space) %></dt>
+    <dd class="attributes-key-value--value-container">
+      <div class="attributes-key-value--value -text">
+        <span><%= number_to_human_size(entries[:data][:free], precision: 2) %></span>
+      </div>
+    </dd>
+    <dt class="attributes-key-value--key"><%= l(:label_storage_used_space) %></dt>
+    <dd class="attributes-key-value--value-container">
+      <div class="attributes-key-value--value -text">
+        <span>
+          <%= number_to_human_size(entries[:data][:used], precision: 2) %>
+          (<%= entries[:data][:percent_used].round(2) %> %)
+        </span>
+      </div>
+    </dd>
+  </dl>
+</div>
+<% end %>
+
+<%= call_hook(:view_admin_info_bottom) %>

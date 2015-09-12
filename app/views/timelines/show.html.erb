@@ -1,0 +1,81 @@
+<%#-- copyright
+OpenProject is a project management system.
+Copyright (C) 2012-2015 the OpenProject Foundation (OPF)
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+Copyright (C) 2006-2013 Jean-Philippe Lang
+Copyright (C) 2010-2013 the ChiliProject Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See doc/COPYRIGHT.rdoc for more details.
+
+++#%>
+
+<% html_title "#{l('timelines.project_menu.timelines')}: #{h @timeline.name}" %>
+<%= toolbar title: h(@timeline.name) do %>
+  <% if timeline_action_authorized?(:new) %>
+    <li class="toolbar-item">
+      <%= new_timeline_link @project do %>
+        <i class="button--icon icon-add"></i>
+        <span class="button--text"><%= l('timelines.new_timeline') %></span>
+        <span class='hidden-for-sighted'><%= h(@timeline.name) %></span>
+      <% end %>
+    </li>
+  <% end %>
+
+  <% if timeline_action_authorized?(:edit) %>
+    <li class="toolbar-item">
+      <%= edit_timeline_link @project, @timeline do %>
+        <i class="button--icon icon-edit"></i>
+        <span class="button--text"><%= l(:button_edit) %></span>
+        <span class='hidden-for-sighted'><%= h(@timeline.name) %></span>
+      <% end %>
+    </li>
+  <% end %>
+
+  <% if timeline_action_authorized?(:destroy) %>
+    <li class="toolbar-item">
+      <%= destroy_timeline_link @project, @timeline do %>
+        <i class="button--icon icon-delete"></i>
+        <span class="button--text"><%= l(:button_delete) %></span>
+        <span class='hidden-for-sighted'><%= h(@timeline.name) %></span>
+      <% end %>
+    </li>
+  <% end %>
+<% end %>
+
+<div id="timeline">
+  <%= form_tag '', {:id => "specialForm", 'ng-controller' => 'TimelineSelectionController'} do %>
+    <span class="inline-label">
+      <%= label_tag 'timeline_select', l("timelines.timeline"), class: "form-label -transparent" %>
+      <ui-select ng-model="vm.currentTimeline" theme="select2"
+        on-select="vm.switchTimeline()">
+        <ui-select-match>{{$select.selected.name}}</ui-select-match>
+        <ui-select-choices repeat="timeline in vm.timelines | filter: { name: $select.search } track by timeline.id">
+          <div ng-bind-html="timeline.name | highlight: $select.search"></div>
+        </ui-select-choices>
+      </ui-select>
+    </span>
+  <% end %>
+
+  <% push_visible_timelines @visible_timelines %>
+  <% push_current_timeline_id @timeline.id %>
+
+  <%= render :partial => "timeline", :locals => {:timeline => @timeline} %>
+</div>
