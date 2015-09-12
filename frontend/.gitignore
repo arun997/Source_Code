@@ -1,5 +1,6 @@
 /.sass-cache
-/bower_components
+/bower_components/*
+!/bower_components/foundation-apps
 /coverage
 /node_modules
 /npm-debug.log

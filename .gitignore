@@ -46,7 +46,7 @@
 /backup
 /.project
 /.loadpath
-/app/assets/javascripts/bundles/*.*
+#/app/assets/javascripts/bundles/*.*
 /config/additional_environment.rb
 /config/configuration.yml
 /config/database.yml

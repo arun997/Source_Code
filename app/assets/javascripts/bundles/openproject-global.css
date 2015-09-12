@@ -1,0 +1,1260 @@
+/*!
+ * jQuery UI CSS Framework 1.10.4
+ * http://jqueryui.com
+ *
+ * Copyright 2014 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden {
+	display: none;
+}
+.ui-helper-hidden-accessible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.ui-helper-reset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	line-height: 1.3;
+	text-decoration: none;
+	font-size: 100%;
+	list-style: none;
+}
+.ui-helper-clearfix:before,
+.ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+.ui-helper-clearfix:after {
+	clear: both;
+}
+.ui-helper-clearfix {
+	min-height: 0; /* support: IE7 */
+}
+.ui-helper-zfix {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	opacity: 0;
+	filter:Alpha(Opacity=0);
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled {
+	cursor: default !important;
+}
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/*!
+ * jQuery UI Datepicker 1.10.4
+ * http://jqueryui.com
+ *
+ * Copyright 2014 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/datepicker/#theming
+ */
+.ui-datepicker {
+	width: 17em;
+	padding: .2em .2em 0;
+	display: none;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 2px;
+	width: 1.8em;
+	height: 1.8em;
+}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 1px;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev-hover {
+	left: 1px;
+}
+.ui-datepicker .ui-datepicker-next-hover {
+	right: 1px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-title select {
+	font-size: 1em;
+	margin: 1px 0;
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 49%;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	border-collapse: collapse;
+	margin: 0 0 .4em;
+}
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 1px;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: .2em;
+	text-align: right;
+	text-decoration: none;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+	background-image: none;
+	margin: .7em 0 0 0;
+	padding: 0 .2em;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane button {
+	float: right;
+	margin: .5em .2em .4em;
+	cursor: pointer;
+	padding: .2em .6em .3em .6em;
+	width: auto;
+	overflow: visible;
+}
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+	float: left;
+}
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi {
+	width: auto;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	width: 95%;
+	margin: 0 auto .4em;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 50%;
+}
+.ui-datepicker-multi-3 .ui-datepicker-group {
+	width: 33.3%;
+}
+.ui-datepicker-multi-4 .ui-datepicker-group {
+	width: 25%;
+}
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+	border-left-width: 0;
+}
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+	clear: left;
+}
+.ui-datepicker-row-break {
+	clear: both;
+	width: 100%;
+	font-size: 0;
+}
+
+/* RTL support */
+.ui-datepicker-rtl {
+	direction: rtl;
+}
+.ui-datepicker-rtl .ui-datepicker-prev {
+	right: 2px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next {
+	left: 2px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+	right: 1px;
+	left: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+	left: 1px;
+	right: auto;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+	clear: right;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+	float: left;
+}
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current,
+.ui-datepicker-rtl .ui-datepicker-group {
+	float: right;
+}
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+	border-right-width: 0;
+	border-left-width: 1px;
+}
+/*!
+ * jQuery UI Dialog 1.10.4
+ * http://jqueryui.com
+ *
+ * Copyright 2014 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/dialog/#theming
+ */
+.ui-dialog {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: .2em;
+	outline: 0;
+}
+.ui-dialog .ui-dialog-titlebar {
+	padding: .4em 1em;
+	position: relative;
+}
+.ui-dialog .ui-dialog-title {
+	float: left;
+	margin: .1em 0;
+	white-space: nowrap;
+	width: 90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: .3em;
+	top: 50%;
+	width: 20px;
+	margin: -10px 0 0 0;
+	padding: 1px;
+	height: 20px;
+}
+.ui-dialog .ui-dialog-content {
+	position: relative;
+	border: 0;
+	padding: .5em 1em;
+	background: none;
+	overflow: auto;
+}
+.ui-dialog .ui-dialog-buttonpane {
+	text-align: left;
+	border-width: 1px 0 0 0;
+	background-image: none;
+	margin-top: .5em;
+	padding: .3em 1em .5em .4em;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float: right;
+}
+.ui-dialog .ui-dialog-buttonpane button {
+	margin: .5em .4em .5em 0;
+	cursor: pointer;
+}
+.ui-dialog .ui-resizable-se {
+	width: 12px;
+	height: 12px;
+	right: -5px;
+	bottom: -5px;
+	background-position: 16px 16px;
+}
+.ui-draggable .ui-dialog-titlebar {
+	cursor: move;
+}
+.atwho-view {
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    margin-top: 18px;
+    background: white;
+    color: black;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    min-width: 120px;
+    z-index: 11110 !important;
+}
+
+.atwho-view .cur {
+    background: #3366FF;
+    color: white;
+}
+.atwho-view .cur small {
+    color: white;
+}
+.atwho-view strong {
+    color: #3366FF;
+}
+.atwho-view .cur strong {
+    color: white;
+    font:bold;
+}
+.atwho-view ul {
+    /* width: 100px; */
+    list-style:none;
+    padding:0;
+    margin:auto;
+}
+.atwho-view ul li {
+    display: block;
+    padding: 5px 10px;
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+    /* border-top: 1px solid #C8C8C8; */
+}
+.atwho-view small {
+    font-size: smaller;
+    color: #777;
+    font-weight: normal;
+}
+/*
+Version: 3.5.2 Timestamp: Sat Nov  1 14:43:36 EDT 2014
+*/
+.select2-container {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    /* inline-block for ie7 */
+    zoom: 1;
+    *display: inline;
+    vertical-align: middle;
+}
+
+.select2-container,
+.select2-drop,
+.select2-search,
+.select2-search input {
+  /*
+    Force border-box so that % widths fit the parent
+    container without overlap because of margin/padding.
+    More Info : http://www.quirksmode.org/css/box.html
+  */ /* webkit */ /* firefox */
+  box-sizing: border-box; /* css3 */
+}
+
+.select2-container .select2-choice {
+    display: block;
+    height: 26px;
+    padding: 0 0 0 8px;
+    overflow: hidden;
+    position: relative;
+
+    border: 1px solid #aaa;
+    white-space: nowrap;
+    line-height: 26px;
+    color: #444;
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    background-clip: padding-box;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+
+    background-color: #fff;
+    background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+    background-image: linear-gradient(to top, #eee 0%, #fff 50%);
+}
+
+html[dir="rtl"] .select2-container .select2-choice {
+    padding: 0 8px 0 0;
+}
+
+.select2-container.select2-drop-above .select2-choice {
+    border-bottom-color: #aaa;
+
+    border-radius: 0 0 4px 4px;
+    background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType=0);
+    background-image: linear-gradient(to bottom, #eee 0%, #fff 90%);
+}
+
+.select2-container.select2-allowclear .select2-choice .select2-chosen {
+    margin-right: 42px;
+}
+
+.select2-container .select2-choice > .select2-chosen {
+    margin-right: 26px;
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+    float: none;
+    width: auto;
+}
+
+html[dir="rtl"] .select2-container .select2-choice > .select2-chosen {
+    margin-left: 26px;
+    margin-right: 0;
+}
+
+.select2-container .select2-choice abbr {
+    display: none;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 24px;
+    top: 8px;
+
+    font-size: 1px;
+    text-decoration: none;
+
+    border: 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACLElEQVR42u3Zz0sUYRzH8bUISoyF1i5iXSooyYgOEXapZNYNojwU/aAfUAT9A4YhUgdxt1To0KFIBCMIvEcUEXntUtivpYuUhYFIdDBMmD69he/hObgsbSnb13ngdZjZhX3eO8/MDrMpSctKErwsg//HUSgU7uNYsB3hHla4CybqEoRPaMJGFCEMewxuxnsIk5iALPqg1yVdj9eQGUdjiuE1eAs+QOYztrsMJqwFk8EyHguW95klD+ZD08gsYvBFCBPYgHXBOT1UNpg3ncQpnAicRbrCCQ3j8SIf5QvYEWxvxnlb0mWDr0MIvcOaCiayC78gRKmlH+WDbaIjkJnDzgq/+VHIvMWqag3ehBkIAxXGdkAIDVRlsE24H9//4ty9hju4Hej710c5m83WYging32HMYjMnwSvx75UlQ+iOiDEaEMLZiA8dPc7TFQDnkGYxQ8Iz9Hs8k4riqIa4l5ApojVbm8tiduPL5CZRs5lMGFH8DNYxo+C5d3tMfgohJeow0qMQujxuqRb0RBsZ3DA2ZIuP5LgJDgJToKr4ZHOWjTOy+fzNa6DiezCFGReod1lMGF3IYzjMm5B5rirYIJyEJ4iHezfjW+YRr2n4EHE2LrAa1cg5DwFj2DWLlKljn67p+B+CIdKPAaOsddTcBOEKbTZvjp0Qvjo8Sp9DjJFfIVMjBsef4f34AHeYAxX0VfqMbDnfw97IXMTta6DLbobcxBa3Qdb9BPE2LZQ8G98530ecQi/2QAAAABJRU5ErkJggg==) right top no-repeat;
+    cursor: pointer;
+    outline: 0;
+}
+
+.select2-container.select2-allowclear .select2-choice abbr {
+    display: inline-block;
+}
+
+.select2-container .select2-choice abbr:hover {
+    background-position: right -11px;
+    cursor: pointer;
+}
+
+.select2-drop-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 9998;
+    /* styles required for IE to work */
+    background-color: #fff;
+    filter: alpha(opacity=0);
+}
+
+.select2-drop {
+    width: 100%;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 9999;
+    top: 100%;
+
+    background: #fff;
+    color: #000;
+    border: 1px solid #aaa;
+    border-top: 0;
+
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+}
+
+.select2-drop.select2-drop-above {
+    margin-top: 1px;
+    border-top: 1px solid #aaa;
+    border-bottom: 0;
+
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 -4px 5px rgba(0, 0, 0, .15);
+}
+
+.select2-drop-active {
+    border: 1px solid #5897fb;
+    border-top: none;
+}
+
+.select2-drop.select2-drop-above.select2-drop-active {
+    border-top: 1px solid #5897fb;
+}
+
+.select2-drop-auto-width {
+    border-top: 1px solid #aaa;
+    width: auto;
+}
+
+.select2-drop-auto-width .select2-search {
+    padding-top: 4px;
+}
+
+.select2-container .select2-choice .select2-arrow {
+    display: inline-block;
+    width: 18px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    border-left: 1px solid #aaa;
+    border-radius: 0 4px 4px 0;
+
+    background-clip: padding-box;
+
+    background: #ccc;
+    background-image: -moz-linear-gradient(center bottom, #ccc 0%, #eee 60%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#cccccc', GradientType = 0);
+    background-image: linear-gradient(to top, #ccc 0%, #eee 60%);
+}
+
+html[dir="rtl"] .select2-container .select2-choice .select2-arrow {
+    left: 0;
+    right: auto;
+
+    border-left: none;
+    border-right: 1px solid #aaa;
+    border-radius: 4px 0 0 4px;
+}
+
+.select2-container .select2-choice .select2-arrow b {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACLElEQVR42u3Zz0sUYRzH8bUISoyF1i5iXSooyYgOEXapZNYNojwU/aAfUAT9A4YhUgdxt1To0KFIBCMIvEcUEXntUtivpYuUhYFIdDBMmD69he/hObgsbSnb13ngdZjZhX3eO8/MDrMpSctKErwsg//HUSgU7uNYsB3hHla4CybqEoRPaMJGFCEMewxuxnsIk5iALPqg1yVdj9eQGUdjiuE1eAs+QOYztrsMJqwFk8EyHguW95klD+ZD08gsYvBFCBPYgHXBOT1UNpg3ncQpnAicRbrCCQ3j8SIf5QvYEWxvxnlb0mWDr0MIvcOaCiayC78gRKmlH+WDbaIjkJnDzgq/+VHIvMWqag3ehBkIAxXGdkAIDVRlsE24H9//4ty9hju4Hej710c5m83WYging32HMYjMnwSvx75UlQ+iOiDEaEMLZiA8dPc7TFQDnkGYxQ8Iz9Hs8k4riqIa4l5ApojVbm8tiduPL5CZRs5lMGFH8DNYxo+C5d3tMfgohJeow0qMQujxuqRb0RBsZ3DA2ZIuP5LgJDgJToKr4ZHOWjTOy+fzNa6DiezCFGReod1lMGF3IYzjMm5B5rirYIJyEJ4iHezfjW+YRr2n4EHE2LrAa1cg5DwFj2DWLlKljn67p+B+CIdKPAaOsddTcBOEKbTZvjp0Qvjo8Sp9DjJFfIVMjBsef4f34AHeYAxX0VfqMbDnfw97IXMTta6DLbobcxBa3Qdb9BPE2LZQ8G98530ecQi/2QAAAABJRU5ErkJggg==) no-repeat 0 1px;
+}
+
+html[dir="rtl"] .select2-container .select2-choice .select2-arrow b {
+    background-position: 2px 1px;
+}
+
+.select2-search {
+    display: inline-block;
+    width: 100%;
+    min-height: 26px;
+    margin: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    position: relative;
+    z-index: 10000;
+
+    white-space: nowrap;
+}
+
+.select2-search input {
+    width: 100%;
+    height: auto !important;
+    min-height: 26px;
+    padding: 4px 20px 4px 5px;
+    margin: 0;
+
+    outline: 0;
+    font-family: sans-serif;
+    font-size: 1em;
+
+    border: 1px solid #aaa;
+    border-radius: 0;
+    box-shadow: none;
+
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACLElEQVR42u3Zz0sUYRzH8bUISoyF1i5iXSooyYgOEXapZNYNojwU/aAfUAT9A4YhUgdxt1To0KFIBCMIvEcUEXntUtivpYuUhYFIdDBMmD69he/hObgsbSnb13ngdZjZhX3eO8/MDrMpSctKErwsg//HUSgU7uNYsB3hHla4CybqEoRPaMJGFCEMewxuxnsIk5iALPqg1yVdj9eQGUdjiuE1eAs+QOYztrsMJqwFk8EyHguW95klD+ZD08gsYvBFCBPYgHXBOT1UNpg3ncQpnAicRbrCCQ3j8SIf5QvYEWxvxnlb0mWDr0MIvcOaCiayC78gRKmlH+WDbaIjkJnDzgq/+VHIvMWqag3ehBkIAxXGdkAIDVRlsE24H9//4ty9hju4Hej710c5m83WYging32HMYjMnwSvx75UlQ+iOiDEaEMLZiA8dPc7TFQDnkGYxQ8Iz9Hs8k4riqIa4l5ApojVbm8tiduPL5CZRs5lMGFH8DNYxo+C5d3tMfgohJeow0qMQujxuqRb0RBsZ3DA2ZIuP5LgJDgJToKr4ZHOWjTOy+fzNa6DiezCFGReod1lMGF3IYzjMm5B5rirYIJyEJ4iHezfjW+YRr2n4EHE2LrAa1cg5DwFj2DWLlKljn67p+B+CIdKPAaOsddTcBOEKbTZvjp0Qvjo8Sp9DjJFfIVMjBsef4f34AHeYAxX0VfqMbDnfw97IXMTta6DLbobcxBa3Qdb9BPE2LZQ8G98530ecQi/2QAAAABJRU5ErkJggg==) no-repeat 100% -22px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACLElEQVR42u3Zz0sUYRzH8bUISoyF1i5iXSooyYgOEXapZNYNojwU/aAfUAT9A4YhUgdxt1To0KFIBCMIvEcUEXntUtivpYuUhYFIdDBMmD69he/hObgsbSnb13ngdZjZhX3eO8/MDrMpSctKErwsg//HUSgU7uNYsB3hHla4CybqEoRPaMJGFCEMewxuxnsIk5iALPqg1yVdj9eQGUdjiuE1eAs+QOYztrsMJqwFk8EyHguW95klD+ZD08gsYvBFCBPYgHXBOT1UNpg3ncQpnAicRbrCCQ3j8SIf5QvYEWxvxnlb0mWDr0MIvcOaCiayC78gRKmlH+WDbaIjkJnDzgq/+VHIvMWqag3ehBkIAxXGdkAIDVRlsE24H9//4ty9hju4Hej710c5m83WYging32HMYjMnwSvx75UlQ+iOiDEaEMLZiA8dPc7TFQDnkGYxQ8Iz9Hs8k4riqIa4l5ApojVbm8tiduPL5CZRs5lMGFH8DNYxo+C5d3tMfgohJeow0qMQujxuqRb0RBsZ3DA2ZIuP5LgJDgJToKr4ZHOWjTOy+fzNa6DiezCFGReod1lMGF3IYzjMm5B5rirYIJyEJ4iHezfjW+YRr2n4EHE2LrAa1cg5DwFj2DWLlKljn67p+B+CIdKPAaOsddTcBOEKbTZvjp0Qvjo8Sp9DjJFfIVMjBsef4f34AHeYAxX0VfqMbDnfw97IXMTta6DLbobcxBa3Qdb9BPE2LZQ8G98530ecQi/2QAAAABJRU5ErkJggg==) no-repeat 100% -22px, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0;
+}
+
+html[dir="rtl"] .select2-search input {
+    padding: 4px 5px 4px 20px;
+
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACLElEQVR42u3Zz0sUYRzH8bUISoyF1i5iXSooyYgOEXapZNYNojwU/aAfUAT9A4YhUgdxt1To0KFIBCMIvEcUEXntUtivpYuUhYFIdDBMmD69he/hObgsbSnb13ngdZjZhX3eO8/MDrMpSctKErwsg//HUSgU7uNYsB3hHla4CybqEoRPaMJGFCEMewxuxnsIk5iALPqg1yVdj9eQGUdjiuE1eAs+QOYztrsMJqwFk8EyHguW95klD+ZD08gsYvBFCBPYgHXBOT1UNpg3ncQpnAicRbrCCQ3j8SIf5QvYEWxvxnlb0mWDr0MIvcOaCiayC78gRKmlH+WDbaIjkJnDzgq/+VHIvMWqag3ehBkIAxXGdkAIDVRlsE24H9//4ty9hju4Hej710c5m83WYging32HMYjMnwSvx75UlQ+iOiDEaEMLZiA8dPc7TFQDnkGYxQ8Iz9Hs8k4riqIa4l5ApojVbm8tiduPL5CZRs5lMGFH8DNYxo+C5d3tMfgohJeow0qMQujxuqRb0RBsZ3DA2ZIuP5LgJDgJToKr4ZHOWjTOy+fzNa6DiezCFGReod1lMGF3IYzjMm5B5rirYIJyEJ4iHezfjW+YRr2n4EHE2LrAa1cg5DwFj2DWLlKljn67p+B+CIdKPAaOsddTcBOEKbTZvjp0Qvjo8Sp9DjJFfIVMjBsef4f34AHeYAxX0VfqMbDnfw97IXMTta6DLbobcxBa3Qdb9BPE2LZQ8G98530ecQi/2QAAAABJRU5ErkJggg==) no-repeat -37px -22px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACLElEQVR42u3Zz0sUYRzH8bUISoyF1i5iXSooyYgOEXapZNYNojwU/aAfUAT9A4YhUgdxt1To0KFIBCMIvEcUEXntUtivpYuUhYFIdDBMmD69he/hObgsbSnb13ngdZjZhX3eO8/MDrMpSctKErwsg//HUSgU7uNYsB3hHla4CybqEoRPaMJGFCEMewxuxnsIk5iALPqg1yVdj9eQGUdjiuE1eAs+QOYztrsMJqwFk8EyHguW95klD+ZD08gsYvBFCBPYgHXBOT1UNpg3ncQpnAicRbrCCQ3j8SIf5QvYEWxvxnlb0mWDr0MIvcOaCiayC78gRKmlH+WDbaIjkJnDzgq/+VHIvMWqag3ehBkIAxXGdkAIDVRlsE24H9//4ty9hju4Hej710c5m83WYging32HMYjMnwSvx75UlQ+iOiDEaEMLZiA8dPc7TFQDnkGYxQ8Iz9Hs8k4riqIa4l5ApojVbm8tiduPL5CZRs5lMGFH8DNYxo+C5d3tMfgohJeow0qMQujxuqRb0RBsZ3DA2ZIuP5LgJDgJToKr4ZHOWjTOy+fzNa6DiezCFGReod1lMGF3IYzjMm5B5rirYIJyEJ4iHezfjW+YRr2n4EHE2LrAa1cg5DwFj2DWLlKljn67p+B+CIdKPAaOsddTcBOEKbTZvjp0Qvjo8Sp9DjJFfIVMjBsef4f34AHeYAxX0VfqMbDnfw97IXMTta6DLbobcxBa3Qdb9BPE2LZQ8G98530ecQi/2QAAAABJRU5ErkJggg==) no-repeat -37px -22px, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0;
+}
+
+.select2-drop.select2-drop-above .select2-search input {
+    margin-top: 4px;
+}
+
+.select2-search input.select2-active {
+    background: #fff url(/assets/bundles/7b9776076d5fceef4993b55c9383dedd.gif) no-repeat 100%;
+    background: url(/assets/bundles/7b9776076d5fceef4993b55c9383dedd.gif) no-repeat 100%, linear-gradient(to bottom, #fff 85%, #eee 99%) 0 0;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+    border: 1px solid #5897fb;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+
+.select2-dropdown-open .select2-choice {
+    border-bottom-color: transparent;
+    box-shadow: 0 1px 0 #fff inset;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    background-color: #eee;
+    background-image: -moz-linear-gradient(center bottom, #fff 0%, #eee 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
+    background-image: linear-gradient(to top, #fff 0%, #eee 50%);
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+    border: 1px solid #5897fb;
+    border-top-color: transparent;
+    background-image: -moz-linear-gradient(center top, #fff 0%, #eee 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#ffffff', GradientType=0);
+    background-image: linear-gradient(to bottom, #fff 0%, #eee 50%);
+}
+
+.select2-dropdown-open .select2-choice .select2-arrow {
+    background: transparent;
+    border-left: none;
+    -webkit-filter: none;
+    filter: none;
+}
+html[dir="rtl"] .select2-dropdown-open .select2-choice .select2-arrow {
+    border-right: none;
+}
+
+.select2-dropdown-open .select2-choice .select2-arrow b {
+    background-position: -18px 1px;
+}
+
+html[dir="rtl"] .select2-dropdown-open .select2-choice .select2-arrow b {
+    background-position: -16px 1px;
+}
+
+.select2-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* results */
+.select2-results {
+    max-height: 200px;
+    padding: 0 0 0 4px;
+    margin: 4px 4px 4px 0;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html[dir="rtl"] .select2-results {
+    padding: 0 4px 0 0;
+    margin: 4px 0 4px 4px;
+}
+
+.select2-results ul.select2-result-sub {
+    margin: 0;
+    padding-left: 0;
+}
+
+.select2-results li {
+    list-style: none;
+    display: list-item;
+    background-image: none;
+}
+
+.select2-results li.select2-result-with-children > .select2-result-label {
+    font-weight: bold;
+}
+
+.select2-results .select2-result-label {
+    padding: 3px 7px 4px;
+    margin: 0;
+    cursor: pointer;
+
+    min-height: 1em;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+.select2-results-dept-1 .select2-result-label { padding-left: 20px }
+.select2-results-dept-2 .select2-result-label { padding-left: 40px }
+.select2-results-dept-3 .select2-result-label { padding-left: 60px }
+.select2-results-dept-4 .select2-result-label { padding-left: 80px }
+.select2-results-dept-5 .select2-result-label { padding-left: 100px }
+.select2-results-dept-6 .select2-result-label { padding-left: 110px }
+.select2-results-dept-7 .select2-result-label { padding-left: 120px }
+
+.select2-results .select2-highlighted {
+    background: #3875d7;
+    color: #fff;
+}
+
+.select2-results li em {
+    background: #feffde;
+    font-style: normal;
+}
+
+.select2-results .select2-highlighted em {
+    background: transparent;
+}
+
+.select2-results .select2-highlighted ul {
+    background: #fff;
+    color: #000;
+}
+
+.select2-results .select2-no-results,
+.select2-results .select2-searching,
+.select2-results .select2-ajax-error,
+.select2-results .select2-selection-limit {
+    background: #f4f4f4;
+    display: list-item;
+    padding-left: 5px;
+}
+
+/*
+disabled look for disabled choices in the results dropdown
+*/
+.select2-results .select2-disabled.select2-highlighted {
+    color: #666;
+    background: #f4f4f4;
+    display: list-item;
+    cursor: default;
+}
+.select2-results .select2-disabled {
+  background: #f4f4f4;
+  display: list-item;
+  cursor: default;
+}
+
+.select2-results .select2-selected {
+    display: none;
+}
+
+.select2-more-results.select2-active {
+    background: #f4f4f4 url(/assets/bundles/7b9776076d5fceef4993b55c9383dedd.gif) no-repeat 100%;
+}
+
+.select2-results .select2-ajax-error {
+    background: rgba(255, 50, 50, .2);
+}
+
+.select2-more-results {
+    background: #f4f4f4;
+    display: list-item;
+}
+
+/* disabled styles */
+
+.select2-container.select2-container-disabled .select2-choice {
+    background-color: #f4f4f4;
+    background-image: none;
+    border: 1px solid #ddd;
+    cursor: default;
+}
+
+.select2-container.select2-container-disabled .select2-choice .select2-arrow {
+    background-color: #f4f4f4;
+    background-image: none;
+    border-left: 0;
+}
+
+.select2-container.select2-container-disabled .select2-choice abbr {
+    display: none;
+}
+
+
+/* multiselect */
+
+.select2-container-multi .select2-choices {
+    height: auto !important;
+    height: 1%;
+    margin: 0;
+    padding: 0 5px 0 0;
+    position: relative;
+
+    border: 1px solid #aaa;
+    cursor: text;
+    overflow: hidden;
+
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #eee 1%, #fff 15%);
+}
+
+html[dir="rtl"] .select2-container-multi .select2-choices {
+    padding: 0 0 0 5px;
+}
+
+.select2-locked {
+  padding: 3px 5px 3px 5px !important;
+}
+
+.select2-container-multi .select2-choices {
+    min-height: 26px;
+}
+
+.select2-container-multi.select2-container-active .select2-choices {
+    border: 1px solid #5897fb;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+}
+.select2-container-multi .select2-choices li {
+    float: left;
+    list-style: none;
+}
+html[dir="rtl"] .select2-container-multi .select2-choices li
+{
+    float: right;
+}
+.select2-container-multi .select2-choices .select2-search-field {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input {
+    padding: 5px;
+    margin: 1px 0;
+
+    font-family: sans-serif;
+    font-size: 100%;
+    color: #666;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent !important;
+}
+
+.select2-container-multi .select2-choices .select2-search-field input.select2-active {
+    background: #fff url(/assets/bundles/7b9776076d5fceef4993b55c9383dedd.gif) no-repeat 100% !important;
+}
+
+.select2-default {
+    color: #999 !important;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice {
+    padding: 3px 5px 3px 18px;
+    margin: 3px 0 3px 5px;
+    position: relative;
+
+    line-height: 13px;
+    color: #333;
+    cursor: default;
+    border: 1px solid #aaaaaa;
+
+    border-radius: 3px;
+    box-shadow: 0 0 2px #fff inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+
+    background-clip: padding-box;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+
+    background-color: #e4e4e4;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#f4f4f4', GradientType=0);
+    background-image: linear-gradient(to bottom, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
+}
+html[dir="rtl"] .select2-container-multi .select2-choices .select2-search-choice
+{
+    margin: 3px 5px 3px 0;
+    padding: 3px 18px 3px 5px;
+}
+.select2-container-multi .select2-choices .select2-search-choice .select2-chosen {
+    cursor: default;
+}
+.select2-container-multi .select2-choices .select2-search-choice-focus {
+    background: #d4d4d4;
+}
+
+.select2-search-choice-close {
+    display: block;
+    width: 12px;
+    height: 13px;
+    position: absolute;
+    right: 3px;
+    top: 4px;
+
+    font-size: 1px;
+    outline: none;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAYAAACiu5n/AAACLElEQVR42u3Zz0sUYRzH8bUISoyF1i5iXSooyYgOEXapZNYNojwU/aAfUAT9A4YhUgdxt1To0KFIBCMIvEcUEXntUtivpYuUhYFIdDBMmD69he/hObgsbSnb13ngdZjZhX3eO8/MDrMpSctKErwsg//HUSgU7uNYsB3hHla4CybqEoRPaMJGFCEMewxuxnsIk5iALPqg1yVdj9eQGUdjiuE1eAs+QOYztrsMJqwFk8EyHguW95klD+ZD08gsYvBFCBPYgHXBOT1UNpg3ncQpnAicRbrCCQ3j8SIf5QvYEWxvxnlb0mWDr0MIvcOaCiayC78gRKmlH+WDbaIjkJnDzgq/+VHIvMWqag3ehBkIAxXGdkAIDVRlsE24H9//4ty9hju4Hej710c5m83WYging32HMYjMnwSvx75UlQ+iOiDEaEMLZiA8dPc7TFQDnkGYxQ8Iz9Hs8k4riqIa4l5ApojVbm8tiduPL5CZRs5lMGFH8DNYxo+C5d3tMfgohJeow0qMQujxuqRb0RBsZ3DA2ZIuP5LgJDgJToKr4ZHOWjTOy+fzNa6DiezCFGReod1lMGF3IYzjMm5B5rirYIJyEJ4iHezfjW+YRr2n4EHE2LrAa1cg5DwFj2DWLlKljn67p+B+CIdKPAaOsddTcBOEKbTZvjp0Qvjo8Sp9DjJFfIVMjBsef4f34AHeYAxX0VfqMbDnfw97IXMTta6DLbobcxBa3Qdb9BPE2LZQ8G98530ecQi/2QAAAABJRU5ErkJggg==) right top no-repeat;
+}
+html[dir="rtl"] .select2-search-choice-close {
+    right: auto;
+    left: 3px;
+}
+
+.select2-container-multi .select2-search-choice-close {
+    left: 3px;
+}
+
+html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
+    left: auto;
+    right: 2px;
+}
+
+.select2-container-multi .select2-choices .select2-search-choice .select2-search-choice-close:hover {
+  background-position: right -11px;
+}
+.select2-container-multi .select2-choices .select2-search-choice-focus .select2-search-choice-close {
+    background-position: right -11px;
+}
+
+/* disabled styles */
+.select2-container-multi.select2-container-disabled .select2-choices {
+    background-color: #f4f4f4;
+    background-image: none;
+    border: 1px solid #ddd;
+    cursor: default;
+}
+
+.select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice {
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #ddd;
+    background-image: none;
+    background-color: #f4f4f4;
+}
+
+.select2-container-multi.select2-container-disabled .select2-choices .select2-search-choice .select2-search-choice-close {    display: none;
+    background: none;
+}
+/* end multiselect */
+
+
+.select2-result-selectable .select2-match,
+.select2-result-unselectable .select2-match {
+    text-decoration: underline;
+}
+
+.select2-offscreen, .select2-offscreen:focus {
+    clip: rect(0 0 0 0) !important;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    outline: 0 !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+.select2-display-none {
+    display: none;
+}
+
+.select2-measure-scrollbar {
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+}
+
+/* Retina-ize icons */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx)  {
+    .select2-search input,
+    .select2-search-choice-close,
+    .select2-container .select2-choice abbr,
+    .select2-container .select2-choice .select2-arrow b {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAADFElEQVR42u2dsW4TQRBAI0ERCYpDpAUdJX/hAlxQ3SekovYXIIvKEiBRIUF1lHT+BP+Br0TCCCsFLW5cmCS3jKWNNFrdZu+EOG7sd9Irkl0p8r3s7Mzs5XLinIMD5uhvAIIBwYBgaMnNNZvNyj0nkUvPQbAdtDjnCSU3zkGwEbS4iOToHATbE6wptVwEGyUhcaW/JkTbT7JcCpIse4K7SC4pk4wRXreE5ZUMUwezgh03lT0YyKKBOhjoZHUi1oCf7mkYohd9ACVFrj50HgxzmtQifKwF15L1fxC8UD9/EQxzHtxC8KiD4FHPNWMhuIACwd33h3kLuXOZ2mc4yyLRZS1kCG6H3uc2Mbl+LO9Z8FRwEaYINnpDdWKVIEdwC/QVC4l97nk6sUqwQHA3wbGEa9Sj4CCxSlIguHtZMg8Tq/4Edy/bLNXB4/G4FKJ1sJ7zTwTrhMuTU3f+NVqc84SSG+bEJR99a3BoaHERybE5HDYYFKwptVwEGyUhcRX5PufBRoiH4Tg80WFMcBfJPJNljfC6JSzzVCUrGMHswUAWDdTBQCcLOveiCdEBnCYBb9kBBAOCAcGAYEDw0XP0NwDBgGBAMCAYEAwIHvD7QzJhIlSCE2rF0o9lav4eBBt5JWHR8EfzdYATfgkFgg2g5J4LdSD1WrjyXDeIPkfwsNErV6/Y38J34aXwWHgkvBJWwi74RSgQPGD8nrtRwrbCe+G0YX9+KHzyc2rPRsgQPFzBEyVrJ7xLvNTsjvBBuFQreYLg4Qpeqv32m3BP+YxJPhUulOAKwQMl2HsnymNK8mudeCF44IK9rCcdBD8XrhBsS/BTBBOibwTPCNEGCFqSX4X7LeSeCRdK8BLBwy6TdIPjo3A3kUF/pkyy1+ioPVsv8KxB7gPhi7BVcndCpqYheKCtSt1+vBR+CG+EZ8IL4a3wU69cRYlgC4cN4UFD/LDBNVAi2NZxYa0Ixe5ikhFs58B/2SC48mOZUMYkI/jw/61diWDzgtOSEWxdcFpyhWDTgtOSEWxccCgZwfZJ9akrJXiKYEDwMfAHMSYobVemsdsAAAAASUVORK5CYII=) !important;
+        background-repeat: no-repeat !important;
+        background-size: 60px 40px !important;
+    }
+
+    .select2-search input {
+        background-position: 100% -21px !important;
+    }
+}
+/*!
+ * ui-select
+ * http://github.com/angular-ui/ui-select
+ * Version: 0.10.0 - 2015-03-23T14:51:37.718Z
+ * License: MIT
+ */
+
+
+/* Style when highlighting a search. */
+.ui-select-highlight {
+  font-weight: bold;
+}
+
+.ui-select-offscreen {
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  outline: 0 !important;
+  left: 0px !important;
+  top: 0px !important;
+}
+
+/* Select2 theme */
+
+/* Mark invalid Select2 */
+.ng-dirty.ng-invalid > a.select2-choice {
+    border-color: #D44950;
+}
+
+.select2-result-single {
+  padding-left: 0;
+}
+
+.select2-locked > .select2-search-choice-close{
+  display:none;
+}
+
+.select-locked > .ui-select-match-close{
+    display:none;
+}
+
+/* Selectize theme */
+
+/* Helper class to show styles when focus */
+.selectize-input.selectize-focus{
+  border-color: #007FBB !important;
+}
+
+/* Fix input width for Selectize theme */
+.selectize-control > .selectize-input > input {
+  width: 100%;
+}
+
+/* Fix dropdown width for Selectize theme */
+.selectize-control > .selectize-dropdown {
+  width: 100%;
+}
+
+/* Mark invalid Selectize */
+.ng-dirty.ng-invalid > div.selectize-input {
+    border-color: #D44950;
+}
+
+
+/* Bootstrap theme */
+
+/* Helper class to show styles when focus */
+.btn-default-focus {
+  color: #333;
+  background-color: #EBEBEB;
+  border-color: #ADADAD;
+  text-decoration: none;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.ui-select-bootstrap .ui-select-toggle {
+  position: relative;
+}
+
+.ui-select-bootstrap .ui-select-toggle > .caret {
+  position: absolute;
+  height: 10px;
+  top: 50%;
+  right: 10px;
+  margin-top: -2px;
+}
+
+/* Fix Bootstrap dropdown position when inside a input-group */
+.input-group > .ui-select-bootstrap.dropdown {
+  /* Instead of relative */
+  position: static;
+}
+
+.input-group > .ui-select-bootstrap > input.ui-select-search.form-control {
+  border-radius: 4px; /* FIXME hardcoded value :-/ */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.ui-select-bootstrap > .ui-select-match {
+  /* Instead of center because of .btn */
+  text-align: left;
+}
+
+.ui-select-bootstrap > .ui-select-match > .caret {
+  position: absolute;
+  top: 45%;
+  right: 15px;
+}
+
+/* See Scrollable Menu with Bootstrap 3 http://stackoverflow.com/questions/19227496 */
+.ui-select-bootstrap > .ui-select-choices {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+  margin-top: -1px;
+}
+
+.ui-select-multiple.ui-select-bootstrap {
+  height: auto;
+  padding: 3px 3px 0 3px;
+}
+
+.ui-select-multiple.ui-select-bootstrap input.ui-select-search {
+  background-color: transparent !important; /* To prevent double background when disabled */
+  border: none;
+  outline: none;
+  height: 1.666666em;
+  margin-bottom: 3px;
+}
+
+.ui-select-multiple.ui-select-bootstrap .ui-select-match .close {
+  font-size: 1.6em;
+  line-height: 0.75;
+}
+
+.ui-select-multiple.ui-select-bootstrap .ui-select-match-item {
+  outline: 0;
+  margin: 0 3px 3px 0;
+}
+
+.ui-select-multiple .ui-select-match-item {
+  position: relative;
+}
+
+.ui-select-multiple .ui-select-match-item.dropping-before:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  height: 100%;
+  margin-right: 2px;
+  border-left: 1px solid #428bca;
+}
+
+.ui-select-multiple .ui-select-match-item.dropping-after:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  margin-left: 2px;
+  border-right: 1px solid #428bca;
+}
+
+.ui-select-bootstrap .ui-select-choices-row>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.ui-select-bootstrap .ui-select-choices-row>a:hover, .ui-select-bootstrap .ui-select-choices-row>a:focus {
+    text-decoration: none;
+    color: #262626;
+    background-color: #f5f5f5;
+}
+
+.ui-select-bootstrap .ui-select-choices-row.active>a {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    background-color: #428bca;
+}
+
+.ui-select-bootstrap .ui-select-choices-row.disabled>a,
+.ui-select-bootstrap .ui-select-choices-row.active.disabled>a {
+    color: #777;
+    cursor: not-allowed;
+    background-color: #fff;
+}
+
+/* fix hide/show angular animation */
+.ui-select-match.ng-hide-add,
+.ui-select-search.ng-hide-add {
+    display: none !important;
+}
+
+/* Mark invalid Bootstrap */
+.ui-select-bootstrap.ng-dirty.ng-invalid > button.btn.ui-select-match {
+    border-color: #D44950;
+}

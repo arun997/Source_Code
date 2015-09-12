@@ -25,6 +25,9 @@
 #
 # See doc/COPYRIGHT.rdoc for more details.
 #++
+#
+
+ruby "2.2.2"
 
 source 'https://rubygems.org'
 
@@ -103,6 +106,7 @@ group :production do
   # requires memcached 1.4+
   # see https://github.com/mperham/dalli
   gem 'dalli', '~> 2.7.2'
+  gem 'rails_12factor'
 end
 
 gem 'sprockets',        '~> 2.12.3'
@@ -202,9 +206,9 @@ gem 'reform', '~> 1.2.6', require: false
 # warned.
 
 platforms :mri, :mingw, :x64_mingw do
-  group :mysql2 do
-    gem 'mysql2', '~> 0.3.11'
-  end
+  #group :mysql2 do
+    #gem 'mysql2', '~> 0.3.11'
+  #end
 
   group :postgres do
     gem 'pg', '~> 0.17.1'
