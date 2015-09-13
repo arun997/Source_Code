@@ -108,7 +108,7 @@ available_languages:
 default_language:
   default: en
 host_name:
-  default: localhost:3000
+  default: mysterious-journey-5625.herokuapp.com
 protocol:
   default: http
 feeds_enabled:
