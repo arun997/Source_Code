@@ -35,7 +35,7 @@ if User.admin.empty?
   user.password = '!AdminAdminAdmin123%&/'
   user.firstname = 'OpenProject'
   user.lastname = 'Admin'
-  user.mail = ENV.fetch('ADMIN_EMAIL') { 'admin@example.net' }
+  user.mail = 'arunanand997@gmail.com'
   user.mail_notification = User::USER_MAIL_OPTION_NON.first
   user.language = I18n.locale.to_s
   user.status = User::STATUSES[:active]
